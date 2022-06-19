@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>chat</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div #messageArea class="message__area">
+      <div [ngClass]="['message', 'outgoing']">outgoing</div>
+      <div [ngClass]="['message', 'incoming']">incoming</div>
+    </div>
+    <div>
+        <textarea 
+        #textarea
+        (keyup.enter)="onKeyUp($event)" 
+        id="textarea" 
+        cols="30" 
+        rows="1" 
+        placeholder="Write a message..."
+        >
+      </textarea>
+    </div>
+</ion-content>
