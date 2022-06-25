@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>video</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf="!full; then thenBlock else elseBlock"></div>
+  <ng-template #thenBlock>
+    <ion-grid>
+      <ion-col size="12">
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <ion-input type="text" id="roomButton" name="room" ngModel></ion-input>
+          <ion-button hidden expand="full" type=submit>submit</ion-button>
+        </form>
+          <video #localVideo class="videoLocal" autoplay></video>
+          <div class="wrapper" #wrapper>
+            <header>
+              <div class="content">
+                <video #remoteVideo class="videoRemote" autoplay></video>
+              </div>
+            </header>
+          </div>
+          <video width="640" height="480" download = "" href autoplay class="videoScreenEl" #videoScreenEl></video>
+      </ion-col>
+    </ion-grid> 
+  </ng-template>
+  <ng-template #elseBlock>
+    <div class="full">
+      <h1>ROOM IS FULL</h1>
+    </div>
+  </ng-template>
+  <div *ngIf !=full()>
+  </div>
+</ion-content>

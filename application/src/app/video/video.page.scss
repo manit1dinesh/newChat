@@ -1,0 +1,41 @@
+.videoLocal{    
+    width: 400px;
+    padding: auto;
+}
+.videoRemote{
+    width: 150px;
+}
+
+ion-input{
+    background-color: black;
+    color: white;
+} 
+
+.wrapper{
+    position: absolute;
+    top: 78vh;   
+    left: 35vh;
+    background: #fff;
+    border-radius: 10px;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.06);
+  }
+  .wrapper header{
+    border: 1px solid #ccc;
+  }
+  .wrapper header.active{
+    cursor: move;  
+    user-select: none;
+  }
+  .wrapper .content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .content .video{
+      width: 200px;
+  }
+  .captureScreen{
+      background-color: greenyellow;
+  }
